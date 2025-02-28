@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Start Page</title>
+        <!-- Ajout de Bootstrap via le CDN -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body class="bg-light">
+
+        <div class="container mt-5">
+            <h1 class="text-center mb-4">Page de Recherche de Banques</h1>
+
+            <!-- Section pour trouver le taux d'intérêt d'une banque -->
+            <section class="mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 p-4 border rounded bg-white shadow-sm">
+                        <h2>Trouver le taux d'intérêt d'une banque</h2>
+                        <form action="BanqueServlet" method="get">
+                            <div class="form-group">
+                                <label for="nomBanque">Nom de la banque :</label>
+                                <input type="text" id="nomBanque" name="nomBanque" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Trouver le taux</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section pour chercher la banque avec le taux le plus bas -->
+            <section class="mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 p-4 border rounded bg-white shadow-sm">
+                        <h2>Chercher la banque avec le taux le plus bas</h2>
+                        <form action="ChercherBanqueServlet" method="get">
+                            <div class="form-group">
+                                <label for="chercherTaux">Chercher la banque qui offre le taux d’intérêt le plus bas :</label>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block">Chercher</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section pour rechercher des banques par type de produit mortgage -->
+            <section class="mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 p-4 border rounded bg-white shadow-sm">
+                        <h2>Recherche de Banques par Type :</h2>
+                        <form action="InterestRateServlet" method="get">
+                            <div class="form-group">
+                                <label for="typeBanque">Entrez le type :</label>
+                                <input type="text" id="typeBanque" name="typeBanque" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-info btn-block">Rechercher</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section pour la simulation de prêt -->
+            <section class="mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 p-4 border rounded bg-white shadow-sm">
+                        <h2>Simulation de Prêt</h2>
+                        <form action="InsuranceRateServlet" method="post">
+                            <div class="form-group">
+                                <label for="montantPret">Entrez le montant du prêt :</label>
+                                <input type="number" id="montantPret" name="montantPret" class="form-control" min="0.01" step="0.01" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombrePaiements">Entrez le nombre de paiements (par an) :</label>
+                                <input type="number" id="nombrePaiements" name="nombrePaiements" class="form-control" min="1" required>
+                            </div>
+                            <button type="submit" class="btn btn-warning btn-block">Calculer</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section pour le calcul de prêt hypothécaire -->
+            <section>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 p-4 border rounded bg-white shadow-sm">
+                        <h2>Calcul de Prêt Hypothécaire</h2>
+                        <form action="MortgageServlet" method="post">
+                            <div class="form-group">
+                                <label for="prixMaison">Prix de la maison :</label>
+                                <input type="number" name="prixMaison" id="prixMaison" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="apportInitial">Apport initial :</label>
+                                <input type="number" name="apportInitial" id="apportInitial" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombrePaiements">Nombre d'années de paiements :</label>
+                                <input type="number" name="nombrePaiements" id="nombrePaiements" class="form-control" min="1" max="60" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Calculer</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <!-- Inclusion de Bootstrap JS et des dépendances -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

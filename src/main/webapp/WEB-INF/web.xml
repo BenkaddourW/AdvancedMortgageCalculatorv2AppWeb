@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <servlet>
+        <servlet-name>ChercherBanqueServlet</servlet-name>
+        <servlet-class>edu.bdeb.controle.ChercherBanqueServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InterestRateServlet</servlet-name>
+        <servlet-class>edu.bdeb.controle.InterestRateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>InsuranceRateServlet</servlet-name>
+        <servlet-class>edu.bdeb.controle.InsuranceRateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MortgageServlet</servlet-name>
+        <servlet-class>edu.bdeb.controle.MortgageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ChercherBanqueServlet</servlet-name>
+        <url-pattern>/ChercherBanqueServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InterestRateServlet</servlet-name>
+        <url-pattern>/InterestRateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InsuranceRateServlet</servlet-name>
+        <url-pattern>/InsuranceRateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MortgageServlet</servlet-name>
+        <url-pattern>/MortgageServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>
